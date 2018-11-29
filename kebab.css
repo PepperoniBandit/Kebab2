@@ -1,0 +1,12 @@
+#header{
+    text-align:center;
+}
+.container{
+    width:800px;
+    height:500px;
+    background:#ccc;
+    border: 4px solid #333;
+}
+/* #kebab{
+    cursor:url(visine.jpg),url(myBall.cur),auto;
+} */
