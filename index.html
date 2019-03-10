@@ -23,9 +23,10 @@
     <h2 id="header">Help cure kebab's 420 red eye!</h2>
     <div id ="  ">
     <img src="./images/kebab.png" id="container" class="container picture" usemap="#map1">
+    <button id ="reset">Reset</button>
     </div>
     <map id ="map1" name="map1">
-        <area shape="rect" alt="" title="" coords="470, 450, 140, 350" href="" target=""/>
+        <area shape="rect" alt="" title="" coords="470, 450, 140, 350"  target=""/>
     </map>
     <img src="./images/visine.png" id="customPointer" width="50" style="position:absolute;">
     <!-- <img src="kebab.png" alt="kebabs" style="width:50%;" id="kebab"> -->
@@ -36,17 +37,46 @@
 
     <script>
        const images = [
-           './images/kebab.png','./images/bronze.png', './images/iron.png', './images/steel.png', './images/black.png', './images/mithril.png', './images/adamant.png', './images/rune.png', './images/dragon.png', './images/3rd.png' 
+           './images/kebab.png','./images/kebab2.png','./images/kebab3.png','./images/kebab4.png','./images/kebab5.png','./images/kebab7.png','./images/kebab9.png','./images/kebab10.png','./images/kebab11.png','./images/kebab12.png','./images/kebab13.png','./images/kebab14.png','./images/kebab15.png','./images/kebab16.png','./images/kebab17.png',
        ]
+
+       const bongHit = [
+            'bong.mp3', 'cough.mp3'
+       ]
+
        let position = 0
 
-    
+       
+       $("#reset").click(function(){
+           event.preventDefault();
+           position = 0
+           $('.picture').attr('src', './images/kebab.png')
+            audio2.play()
+            
+          function reset(){
+            position = 0
+           $('.picture').attr('src', './images/kebab.png')
+            audio2.play()
+          }
+       
+           
+           alert('Thanks bruh 420 Blaze it')
+       })
 
         $("#map1 area:eq(0)").click(function() {
             event.preventDefault();
             (position++)
             $('.picture').attr('src', images[position])
-          
+         
+            if (position >14){
+                console.log(position)
+                alert('thanks nigga, thats some good eye drops')
+                position = 0
+           $('.picture').attr('src', './images/kebab.png')
+            audio2.play()
+            }
+            
+           
             console.log(position)
 
             // alert('keep squirting')
@@ -64,7 +94,13 @@
         }
 
             var audio = new Audio('nigga.mp3');
-                    audio.play();    
+                
+                    
+            var audio2 = new Audio('bong.mp3');
+
+            var audio3 = new Audio('cough.mp3')
+                  
+                   
                     
 
     </script>
