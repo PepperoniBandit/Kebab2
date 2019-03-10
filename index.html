@@ -21,17 +21,32 @@
 
     <h1 id="header">KEBAB</h1>
     <h2 id="header">Help cure kebab's 420 red eye!</h2>
-    <img src="kebab.png" id="container" class="container"><img src="visine.png" id="customPointer" width="50" style="position:absolute;">
+    <div id ="  ">
+    <img src="kebab.png" id="container" class="container picture" usemap="#map1">
+    </div>
+    <map id ="map1" name="map1">
+        <area shape="rect" alt="" title="" coords="470, 450, 140, 350" href="" target=""/>
+    </map>
+    <img src="visine.png" id="customPointer" width="50" style="position:absolute;">
     <!-- <img src="kebab.png" alt="kebabs" style="width:50%;" id="kebab"> -->
+    <!-- 140-480 px wide , 40-110 px tall-->
     <p class=" marquee" style="font-size:100px"><span>Fuck Jews Kill Niggers Maga</span></p>
 
     <button style="position:fixed; " onclick=audio.play()>Nigger</button>
 
-
-
-
     <script>
+       const images = [
+           'visine.png', 'kebab.png', 'axe.png'
+       ]
+for (i=0; i<10; i++){
 
+
+        $("#map1 area:eq(0)").click(function() {
+            event.preventDefault();
+            $('.picture').attr('src', images[2] )
+            // alert('keep squirting')
+        })
+    }
         var cont = document.getElementById('container');
         cont.onmousemove = applyCustomPointer;
 
@@ -43,7 +58,9 @@
         }
 
             var audio = new Audio('nigga.mp3');
-                    audio.play();       
+                    audio.play();    
+                    
+
     </script>
 
 </body>
