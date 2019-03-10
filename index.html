@@ -22,12 +22,12 @@
     <h1 id="header">KEBAB</h1>
     <h2 id="header">Help cure kebab's 420 red eye!</h2>
     <div id ="  ">
-    <img src="kebab.png" id="container" class="container picture" usemap="#map1">
+    <img src="./images/kebab.png" id="container" class="container picture" usemap="#map1">
     </div>
     <map id ="map1" name="map1">
         <area shape="rect" alt="" title="" coords="470, 450, 140, 350" href="" target=""/>
     </map>
-    <img src="visine.png" id="customPointer" width="50" style="position:absolute;">
+    <img src="./images/visine.png" id="customPointer" width="50" style="position:absolute;">
     <!-- <img src="kebab.png" alt="kebabs" style="width:50%;" id="kebab"> -->
     <!-- 140-480 px wide , 40-110 px tall-->
     <p class=" marquee" style="font-size:100px"><span>Fuck Jews Kill Niggers Maga</span></p>
@@ -36,17 +36,23 @@
 
     <script>
        const images = [
-           'visine.png', 'kebab.png', 'axe.png'
+           './images/kebab.png','./images/bronze.png', './images/iron.png', './images/steel.png', './images/black.png', './images/mithril.png', './images/adamant.png', './images/rune.png', './images/dragon.png', './images/3rd.png' 
        ]
-for (i=0; i<10; i++){
+       let position = 0
 
+    
 
         $("#map1 area:eq(0)").click(function() {
             event.preventDefault();
-            $('.picture').attr('src', images[2] )
+            (position++)
+            $('.picture').attr('src', images[position])
+          
+            console.log(position)
+
             // alert('keep squirting')
+            
         })
-    }
+    
         var cont = document.getElementById('container');
         cont.onmousemove = applyCustomPointer;
 
